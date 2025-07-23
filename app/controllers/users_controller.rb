@@ -1,8 +1,10 @@
+require 'pry'
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
 
   # GET /users or /users.json
   def index
+    binding.pry
     @users = User.all
   end
 
